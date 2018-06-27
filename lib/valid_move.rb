@@ -4,7 +4,7 @@ def valid_move?(board,index)
   if index.between?(0,8)
     return_value = true
   end
-  return return_value && !position_taken?(board, index)
+  return return_value && !position_taken?(board, index) # position_taken? returns false if the square is available, so need to negate that
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
